@@ -1,0 +1,13 @@
+D:\VS_Projects\python\forging\forging\bin\Microsoft.PythonTools.WebRole.dll
+D:\VS_Projects\python\forging\forging\obj\Debug\attach_server.py
+D:\VS_Projects\python\forging\forging\obj\Debug\visualstudio_py_debugger.py
+D:\VS_Projects\python\forging\forging\obj\Debug\visualstudio_py_repl.py
+D:\VS_Projects\python\forging\forging\obj\Debug\visualstudio_py_util.py
+D:\VS_Projects\python\forging\forging\obj\Debug\__init__.py
+D:\VS_Projects\python\forging\forging\obj\Debug\__main__.py
+D:\VS_Projects\python\forging\forging\bin\AzureSetup.cfg
+D:\VS_Projects\python\forging\forging\bin\Microsoft.PythonTools.AzureSetup.exe
+D:\VS_Projects\python\forging\forging\bin\Microsoft.PythonTools.AzureSetup.exe.config
+D:\VS_Projects\python\forging\forging\bin\wfastcgi.py
+D:\VS_Projects\python\forging\forging\obj\Debug\web.config
+D:\VS_Projects\python\forging\forging\obj\Debug\web.debug.config

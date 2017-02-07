@@ -1,0 +1,127 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+<section class="main-section">
+    <div class="container main-section-container">
+        <div class="main-section-info">
+            <div class="row main-section-container-title">
+                {{basicdata.our_name}}
+            </div>
+            <div class="row">
+                <button class="btn btn-default">каталог</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="info-section">
+    <div class="section-title">
+        Информация / Отзывы
+    </div>
+    <div class="container container-content">
+        <div class="about-us">
+            <div class="about-us-title">
+                Мы "{{basicdata.our_name}}"
+            </div>
+            <div class="about-us-main-descr">
+                Мы обеспечиваем наших клиентов <span class="accent-words">уникальной</span>, красивой и долговечной ковкой в исполнении <span class="accent-words">талантливых</span> мастеров. Качественно и не дорого.
+            </div>
+        </div>
+        <div class="feedbacks">
+            <div class="feedback-1">
+                <div class="row">
+                    Какая <span class="accent-words">красота</span> моему мужу так понравилось.
+                </div>
+                <div class="row sign">
+                    Анастасия Кузнецова
+                </div>
+            </div>
+            <div class="feedback-2">
+                <div class="row">
+                    <span class="accent-words">Отличная</span> работа ,выполнили в срок и цены меня очень <span class="accent-words">удивили!</span>
+                </div>
+                <div class="row sign">
+                    Максим Шершнев
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="order-section">
+    <div class="section-title">
+        Оформить заказ
+    </div>
+    <div class="container">
+        <form class="form-horizontal form-order" action="/sender" method="POST" role="form">
+                    {%csrf_token%}
+                    <div class="modal-body">
+                        <div class="form-group">
+                              <input type="text" class="form-control" id="inputName" placeholder="имя">
+                        </div>
+                        <div class="form-group">
+                              <input type="tel" class="form-control" id="inputTel" placeholder="телефон">
+                        </div>
+                         <div class="form-group">
+                              <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                              <textarea class="form-control" id="inputDescr" placeholder="описание заказа" rows="4"></textarea>
+                        </div>
+                        
+                    </div>
+                    <div class="modal-footer modal-footer-form">
+                    <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                        </div>
+                </form>
+    </div>
+</section>
+<section class="news-section"><div class="container"></div></section>
+<section class="contacts-section">
+    <div class="section-title">
+        Контакты
+    </div>
+    <div class="container container-content">
+        <div class="row address">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 address-text">
+                <div class="address-home">
+                    <div class="row title">
+                        Нас можно <span class="accent-words">найти</span>:
+                    </div>
+                    <div class="row point">
+                        г. Пермь <br>                        улица <span class="accent-words">Маршрутная</span>, 21
+                    </div>
+                </div>
+                <div>
+                    <div class="row title">
+                        Или <span class="accent-words">позвонить</span> нам:
+                    </div>
+                    <div class="row point">
+                        {{basicdata.tel}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 address-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2115.285477631471!2d56.23423031600246!3d57.98299898120814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e8c0c813763261%3A0x86dd4b3733380539!2z0YPQuy4g0JzQsNGA0YjRgNGD0YLQvdCw0Y8sIDIxLCDQn9C10YDQvNGMLCDQn9C10YDQvNGB0LrQuNC5INC60YDQsNC5LCA2MTQxMTE!5e0!3m2!1sru!2sru!4v1486493723555" width="100%" height="100%" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="social-life">
+            <div class="row">
+                Мы в <span class="accent-words">социальных</span> сетях:
+            </div>
+            <div class="row icons">
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <i class="fa fa-instagram " aria-hidden="true"></i>
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 accent-words">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <i class="fa fa-vk" aria-hidden="true"></i>
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 accent-words">
+                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
