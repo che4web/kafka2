@@ -210,7 +210,7 @@ section {
     max-height:20%;
     max-width:98%;
     margin: 0 auto;
-    padding-top:18%;
+    padding-top:10%;
     font-size:32pt;
     text-align:center;
 }
@@ -232,8 +232,8 @@ section {
     border:4px solid rgb(102, 19, 35);
 }
 .social-life .icons{
-    padding-left:15%;
-    padding-right:15%;
+    padding-left:30%;
+    padding-right:30%;
 }
 
 
