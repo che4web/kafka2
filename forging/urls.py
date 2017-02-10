@@ -49,7 +49,7 @@ urlpatterns = [
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 
-    url(r'^catalog/', catalog.views.album_list, name='catalog'),
+    url(r'^catalog/$', catalog.views.album_list, name='catalog'),
     url(r'^catalog/(?P<pk>\d+)/$', catalog.views.AlbumDetailView.as_view(), name='album-detail'),
     #url(r'^news2$', views.NewsListView.as_view(), name='news-list2'),
 ]
