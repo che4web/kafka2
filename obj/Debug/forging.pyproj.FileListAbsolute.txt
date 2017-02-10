@@ -11,3 +11,16 @@ D:\VS_Projects\python\forging\forging\bin\Microsoft.PythonTools.AzureSetup.exe.c
 D:\VS_Projects\python\forging\forging\bin\wfastcgi.py
 D:\VS_Projects\python\forging\forging\obj\Debug\web.config
 D:\VS_Projects\python\forging\forging\obj\Debug\web.debug.config
+C:\test\forging\forging\bin\Microsoft.PythonTools.WebRole.dll
+C:\test\forging\forging\obj\Debug\attach_server.py
+C:\test\forging\forging\obj\Debug\visualstudio_py_debugger.py
+C:\test\forging\forging\obj\Debug\visualstudio_py_repl.py
+C:\test\forging\forging\obj\Debug\visualstudio_py_util.py
+C:\test\forging\forging\obj\Debug\__init__.py
+C:\test\forging\forging\obj\Debug\__main__.py
+C:\test\forging\forging\bin\AzureSetup.cfg
+C:\test\forging\forging\bin\Microsoft.PythonTools.AzureSetup.exe
+C:\test\forging\forging\bin\Microsoft.PythonTools.AzureSetup.exe.config
+C:\test\forging\forging\bin\wfastcgi.py
+C:\test\forging\forging\obj\Debug\web.config
+C:\test\forging\forging\obj\Debug\web.debug.config

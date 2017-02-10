@@ -7,14 +7,17 @@ from datetime import datetime
 from django.conf.urls import url
 import django.contrib.auth.views
 
+from catalog import views
 from django.conf.urls.static import static
 from django.conf.urls import include
 from django.conf import settings
 from django.contrib import admin
+
 admin.autodiscover()
 
 import app.forms
 import app.views
+import catalog.views
 
 urlpatterns = [
     # Examples:
@@ -45,5 +48,9 @@ urlpatterns = [
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+
+    url(r'^catalog/', catalog.views.album_list, name='catalog'),
+    url(r'^catalog/(?P<pk>\d+)/$', catalog.views.AlbumDetailView.as_view(), name='album-detail'),
+    #url(r'^news2$', views.NewsListView.as_view(), name='news-list2'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

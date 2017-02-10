@@ -1,6 +1,7 @@
 ﻿{% extends "app/layout.html" %}
 
 {% block content %}
+{% load staticfiles %}
 <section class="main-section">
     <div class="container main-section-container">
         <div class="main-section-info">
@@ -8,7 +9,7 @@
                 {{basicdata.our_name}}
             </div>
             <div class="row">
-                <button class="btn btn-default">каталог</button>
+                <a class="btn btn-default" href="{% url 'catalog' %}">каталог</a>
             </div>
         </div>
     </div>
@@ -74,7 +75,71 @@
                 </form>
     </div>
 </section>
-<section class="news-section"><div class="container"></div></section>
+<section class="news-section">
+    <div class="section-title">
+        Новости
+    </div>
+    <div class="container container-content">
+        <div class="news-img-block">
+            <img src="{% static 'app/img/i1.jpg' %}" />
+            <div class="news-info-block">
+                <div class="news-info-block-inner" > 
+                    <div class="new-title" >
+                        Очередная новость
+                    </div>
+                    <div class="new-text" >
+                        ИЗГОТОВЛЕНИЕ НА ЗАКАЗ:
+Козырьки, навесы, входные группы, ворота, заборы, калитки и прочие металлоизделия, в т.ч. из кованых элементов
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="news-img-block">
+            <img src="{% static 'app/img/i2.jpg' %}" />
+            <div class="news-info-block">
+                <div class="news-info-block-inner" > 
+                    <div class="new-title" >
+                        Очередная новость
+                    </div>
+                    <div class="new-text" >
+                        ИЗГОТОВЛЕНИЕ НА ЗАКАЗ:
+Козырьки, навесы, входные группы, ворота, заборы, калитки и прочие металлоизделия, в т.ч. из кованых элементов
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="news-img-block">
+            <img src="{% static 'app/img/i3.jpg' %}" />
+            <div class="news-info-block">
+                <div class="news-info-block-inner" > 
+                    <div class="new-title" >
+                        Очередная новость
+                    </div>
+                    <div class="new-text" >
+                        ИЗГОТОВЛЕНИЕ НА ЗАКАЗ:
+Козырьки, навесы, входные группы, ворота, заборы, калитки и прочие металлоизделия, в т.ч. из кованых элементов
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="news-img-block">
+            <img src="{% static 'app/img/i4.jpg' %}" />
+           <div class="news-info-block">
+                <div class="news-info-block-inner"> 
+                    <div class="new-title" >
+                        Очередная новость
+                    </div>
+                    <div class="new-text">
+                        ИЗГОТОВЛЕНИЕ НА ЗАКАЗ:
+Козырьки, навесы, входные группы, ворота, заборы, калитки и прочие металлоизделия, в т.ч. из кованых элементов
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 <section class="contacts-section">
     <div class="section-title">
         Контакты
@@ -87,7 +152,8 @@
                         Нас можно <span class="accent-words">найти</span>:
                     </div>
                     <div class="row point">
-                        г. Пермь <br>                        улица <span class="accent-words">Маршрутная</span>, 21
+                        г. Пермь <br>
+                        улица <span class="accent-words">Маршрутная</span>, 21
                     </div>
                 </div>
                 <div>
@@ -124,4 +190,24 @@
         </div>
     </div>
 </section>
+
+
+<script>
+    //$('.news-img-block').hover(function () {
+    //    $(this).children('.news-info-block').removeClass('news-info-block-hide')
+    //    },
+    //    function () {
+    //        $(this).children('.news-info-block').addClass('news-info-block-hide')
+    //    }  
+    //)
+    $('.news-img-block').hover(function () {
+        $(this).children('.news-info-block').css('display', 'block')
+    },
+        function () {
+            $(this).children('.news-info-block').css('display', 'none')
+        }
+    )
+
+</script>
+
 {% endblock %}
