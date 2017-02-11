@@ -2,29 +2,32 @@
 
 {% block content %}
 {% load staticfiles %}
-    <section class="albums-section">
-        <div class="section-title">
-            наши работы=================
-        </div>
-        <div class="container container-content">
-            <div class="row albims-list">
-                {%for photo in object.photo_set.all%}
-                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                    <div class="album-title">
-                        ковыне крыши
-                    </div>
-                    <img class="fancybox" rel="gallery1" src="{% static 'app/img/i1.jpg' %}" />
-                </div>
-                {%endfor%}
+<section class="albums-section">
+<div class="section-title">
+    наши работы=================
+</div>
+<div class="container container-content">
+    <div class="row albims-list">
+        {%for photo in object.photo_set.all%}
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div class="album-title">
+                ковыне крыши
             </div>
+            <a class="fancybox" rel="gallery1"
+                href="{{photo.img.url}}">
+                <img  src="{{photo.img.url}}" />
+            </a>
         </div>
-    </section>
+        {%endfor%}
+    </div>
+</div>
+</section>
 
-    <script>
+<script>
     $(document).ready(function() {
     $(".fancybox").fancybox({
-        openEffect	: 'none',
-        closeEffect	: 'none'
+    openEffect	: 'none',
+    closeEffect	: 'none'
     });
     })
 </script>
