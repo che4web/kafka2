@@ -20,7 +20,7 @@
     <img class="card-img-top" src="{{album.get_prewiew}}" alt="Card image cap">
     <div class="card-block">
         <h4 class="card-title">{{album.title}}</h4>
-        <p class="card-text">{{album.text }}</p>
+        <p class="card-text">{{album.text |slice:":100" }} {%if album.text|length > 100 %} ... {%endif%}</p>
         <a href="{{album.get_absolute_url}}" class="btn btn-primary">Подробней</a>
     </div>
 </div>

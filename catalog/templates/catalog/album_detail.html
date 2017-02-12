@@ -15,7 +15,6 @@
 <h1 >
     {{object.title}}
 </h1>
-  {{object.text}}
     <div class="row albims-list">
         {%for photo in object.photo_set.all%}
         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
@@ -26,6 +25,8 @@
         </div>
         {%endfor%}
     </div>
+
+  {{object.text}}
 </div>
 </section>
 
