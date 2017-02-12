@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} - My Django Application</title>
+    <title>{{ title }}</title>
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
     <link rel="stylesheet" href="{% static 'app/font-awesome/css/font-awesome.min.css' %}">
@@ -15,9 +15,9 @@
     <script src="{% static 'app/scripts/jquery.fancybox.pack.js' %}"></script>
 </head>
 
-<body>
+<body  data-spy="scroll" data-target="#main-navbar">
 
-    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse" id="main-navbar">
     <div class="container">
       <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -25,20 +25,24 @@
       <a class="navbar-brand" href="#"></a>
       <div class="navbar-collapse collapse" id="navbarCollapse" aria-expanded="false" style="">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Новости</a> <span class="sr-only">(current)</span></a>
+            <li class="nav-item go">
+                <a class="nav-link" href="/#main-section">Главная</a>
+            </li>
+            <li class="nav-item go">
+                <a class="nav-link" href="/#order-section">Заказ</a>
+            </li>
+          <li class="nav-item go">
+            <a class="nav-link" href="/#news-section">Новости</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Заказ</a>
+            <li class="nav-item go">
+            <a class="nav-link" href="/#contacts-section">Контакты</a>
           </li>
+          
           <li class="nav-item">
-            <a class="nav-link" href="#">Каталог</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+            <a class="nav-link" href="{% url 'catalog' %}">Каталог</a>
           </li>
         </ul>
-        <div class="navbar__phone" >+7(999) 9999999</div>
+        <div class="navbar__phone"><a href="tel:+7(999)9999999">+7 (999) 999 99 99</a></div>
       </div>
       </div>
     </nav>

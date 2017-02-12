@@ -2,7 +2,7 @@
 
 {% block content %}
 {% load staticfiles %}
-<section class="main-section">
+<section class="main-section" id="main-section">
 <div class="container main-section-container">
     <div class="main-section-info">
         <div class="row main-section-container-title">
@@ -19,7 +19,7 @@
     </div>
 </div>
 </section>
-<section class="info-section">
+<section class="info-section" id="info-section">
 <div class="container container-content">
     <div class="section-title">
 
@@ -34,8 +34,8 @@
     </div>
 </div>
 </section>
-<section class="order-section">
-<div class="container">
+<section class="order-section" id="order-section">
+<div class="container container-content">
     <h2 class="section-title">
         Оформить заказ
     </h2>
@@ -63,43 +63,45 @@
     </form>
 </div>
 </section>
-<section class="news-section">
-<div class="container container-content">
-    <h2 class="section-title">
-        Новости
-    </h2>
-    <div class="albums-list">
-        {%for news in news_list%}
-        <div class="card" style="width: 20rem;">
-    <img class="card-img-top" src="{{news.get_prewiew}}" alt="Card image cap">
-    <div class="card-block">
-        <h4 class="card-title">{{news.title}}</h4>
-        <p class="card-text">{{news.text }}</p>
-        <a href="{{news.get_absolute_url}}" class="btn btn-primary">Подробней</a>
+<section class="news-section" id="news-section">
+    <div class="container container-content">
+        <h2 class="section-title">
+            Новости
+        </h2>
+        <div class="albums-list row">
+            {%for news in news_list%}
+            <div class="card" style="width: 20rem;">
+                <img class="card-img-top" src="{{news.get_prewiew}}" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">{{news.title}}</h4>
+                    <p class="card-text">{{news.text }}</p>
+                    <a href="{{news.get_absolute_url}}" class="btn btn-primary">Подробней</a>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
     </div>
-    {%endfor%}
-</div>
 </section>
-<section class="contacts-section">
+<section class="contacts-section" id="contacts-section">
 
 <div class="container container-content">
     <h2 class="section-title">
         Контакты
     </h2>
     <div class="row address">
-        <div class=" col-md-6  address-text">
+        <div class="col-md-6  address-text">
             <div class="address-home">
-                <div class=" title">
+                <div class="title">
                     Нас можно <span class="accent-words">найти</span>:
                 </div>
-                <div class=" point">
+                <div class="point">
                     г. Пермь <br>
                     улица <span class="accent-words">Маршрутная</span>, 21
                 </div>
             </div>
         </div>
-        <div class=" col-md-6">
-            <div class=" title">
+        <div class="col-md-6 phone">
+            <div class="title">
                 Или <span class="accent-words">позвонить</span> нам:
             </div>
             <div class="point">
@@ -115,7 +117,9 @@
     <div class="row address">
         <div class="social-life">
             <div class="row">
-                Мы в <span class="accent-words">социальных</span> сетях:
+                <div class="col-md-12">
+                    Мы в <span class="accent-words"> социальных </span> сетях:
+                </div>
             </div>
             <div class="row icons">
                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
@@ -132,11 +136,24 @@
                 </div>
             </div>
         </div>
+        </div>
     </div>
     </section>
 
 
     <script>
+        $(document).ready(function () {
+            $("#navbarCollapse .go").on("click", "a", function (event) {
+                //отменяем стандартную обработку нажатия по ссылке
+                event.preventDefault();
+                //забираем идентификатор бока с атрибута href
+                var id_ = $(this).attr('href');
+                var id = id_.replace("/", "");
+                var top = $(id).offset().top - 50;
+                //alert($(id).offset().top);
+                $('body').animate({ scrollTop: top }, 600);
+            });
+        });
         //$('.news-img-block').hover(function () {
         //    $(this).children('.news-info-block').removeClass('news-info-block-hide')
         //    },
