@@ -16,30 +16,34 @@
 </head>
 
 <body>
-    
-    <div class="navbar">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="nav navbar-collapse collapse main-menu">
-                <div class="main-menu-part">
-                    <a href="#" type="button" class="btn btn-primary btn-lg main-menu-part-btn"><span class="">></span></a>
-                </div>
-                <div class="main-menu-part menu">
-                     <ul class="nav navbar-nav">
-                        <li><a href="{% url 'home' %}">Home</a></li>
-                        <li><a href="{% url 'about' %}">About</a></li>
-                        <li><a href="{% url 'contact' %}">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-        </div>
+
+    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+    <div class="container">
+      <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#"></a>
+      <div class="navbar-collapse collapse" id="navbarCollapse" aria-expanded="false" style="">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Новости</a> <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Заказ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Каталог</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+        <div class="navbar__phone" >+7(999) 9999999</div>
+      </div>
+      </div>
+    </nav>
+    <div class="container breadcrumb__container">
+{% block breadcrumb%}{% endblock %}
     </div>
         
     <div class="body-content">

@@ -6,7 +6,7 @@ class Album(models.Model):
     title = models.CharField(max_length=255)
     text = models.TextField()
     order = models.IntegerField()
-    preview= models.OneToOneField('Photo',blank=True)
+    preview= models.OneToOneField('Photo',blank=True,null=True)
 
     @models.permalink
     def get_absolute_url(self):
@@ -14,11 +14,44 @@ class Album(models.Model):
 
     def __unidoce__(self):
         return self.title.encode('utf-8')
-    def __str__(self):
-        return self.title.encode('utf-8')
+   # def __str__(self):
+   #     return self.title.encode('utf-8')
+    def get_prewiew(self):
+        if self.preview:
+            return self.preview.img.url
+        else:
+            return DEFAULT_PHOTO
+
     class Meta:
         verbose_name=u"Альбом"
         verbose_name_plural=u"Альбомы"
+        ordering=["order"]
+
+
+class News(models.Model):
+    title = models.CharField(max_length=255)
+    text = models.TextField()
+    order = models.IntegerField()
+    preview= models.OneToOneField('Photo',blank=True)
+    date = models.DateField(auto_now=True)
+
+    @models.permalink
+    def get_absolute_url(self):
+        return ('news-detail', [self.id])
+
+    def __unidoce__(self):
+        return self.title.encode('utf-8')
+   # def __str__(self):
+   #     return self.title.encode('utf-8')
+    def get_prewiew(self):
+        if self.preview:
+            return self.preview.img.url
+        else:
+            return DEFAULT_PHOTO
+
+    class Meta:
+        verbose_name=u"Новости"
+        verbose_name_plural=u"Новости"
         ordering=["order"]
 
 class Photo(models.Model):

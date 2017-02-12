@@ -49,20 +49,22 @@ input[type="checkbox"].input-validation-error {
 html, body {
     margin: 0;
     padding: 0;
+     font-family:Candara;
 }
 
 section {
-    height: 100vh;
+  #  height: 100vh;
     font-family:Candara;
+    padding-bottom: 60px;
 }
 
 .main-section{
     font-family:'MS Gothic';
 }
 
-.info-section, .news-section, .albums-section
+.info-section, .news-section 
 {
-    background-color: rgb(25,26,28);
+   background-color: rgb(25,26,28);
 }
 
 .order-section, .contacts-section
@@ -74,20 +76,19 @@ section {
     color: rgb(102, 19, 35);
 }
 
-.navbar{
-    position:fixed;
+.navbar__phone{
+    color:#fff
 }
 
 .main-section-container{
-    padding:20% 0;
-    margin-left:10%;
-    margin-right:10%;
     color:rgb(102, 19, 35);
     max-width: 100%;
+    height:450px;
 }
 
 .main-section-info{
     width:40%;
+    margin-top:250px;
     margin-left:-10%;
 }
 
@@ -104,7 +105,7 @@ section {
     
 }
 
-.main-section-container .btn, .main-section-container button, .form-order button{
+.main-section-container .btn, .main-section-container button, {
     background-color:transparent;
     border-color:rgb(102, 19, 35);
     border-radius:0%;
@@ -129,10 +130,9 @@ section {
 }
 
 .section-title{
-    color: rgb(102, 19, 35);
-    font-size:18pt;
-    padding-top:2%;
-    padding-left:3%;
+    color: rgb(255, 255, 255);;
+    font-size:42pt;
+   padding:25px
 }
 
 .container-content{
@@ -232,11 +232,11 @@ section {
 }
 
 .form-order{
-    border:4px solid rgb(102, 19, 35);
+    border:2px solid rgb(102, 19, 35);
     margin: auto;
     max-width:960px;
     max-height:830px;
-    padding: 8% 0;
+   
 }
 
 .form-order textarea {
@@ -277,7 +277,7 @@ section {
 }
 
 .address-text .title{
-    font-size:48px;
+    font-size:28px;
     margin-bottom:1%;
 }
 
@@ -305,7 +305,9 @@ section {
 .address-home{
     margin-bottom:25%;
 }
-
+.address-map{
+    height: 400px;
+}
 .address-map iframe{
     border:4px solid rgb(102, 19, 35);
 }
@@ -405,11 +407,11 @@ section {
     height: auto;
     width: 100%;
     background-size: cover;
-    border: 4px solid rgb(102, 19, 35);
+#    border: 4px solid rgb(102, 19, 35);
 }
 
  .albums-section .container-content{
-     padding-top:5%;
+  #   padding-top:5%;
  }
  .albums-section .section-title{
      padding-top:5%;
@@ -418,21 +420,48 @@ section {
      text-transform:uppercase;
  }
 
+.navbar-kovka{
+background-color:rgba(0, 0, 0, 0.2);
+border-color: #661323;
+#opacity:0.1
+
+}
+
+.navbar-kovka .navbar-nav > li > a{
+    color: #fff;;
+    opacity: 0.87;
+}
+
+.navbar-kovka .navbar-nav > li > a:hover{
+    background-color: #661323;
+}
+
+a.navbar-brand{
+ color:#661323
+}
+.breadcrumb__container{
+margin-top:50px
+}
+
+h1 {
+margin:30px
+
+}
 
 
 
 
 
+.albums-list .card {
+background-color: #292b2c;
+margin:15px
+}
 
-
-
-
-
-
-
-
-
-
+.breadcrumb{
+    background-color: #000;
+    border-radius: .25rem;
+    border-bottom: 2px solid #80182f;
+}
 
 
 
@@ -466,4 +495,21 @@ section {
 
 .main-menu-part-btn span{
     margin:0 auto;
+}
+
+a {
+color: #fed480;
+}
+
+a:focus, a:hover {
+    color: #fbf3e3;
+   # text-decoration: underline;
+}
+.btn-primary{
+background-color: rgba(96, 22, 36, 0);
+border-color: rgb(102, 19, 35);
+}
+.btn-primary:hover{
+background-color: #060606;
+border-color: rgb(102, 19, 35);
 }

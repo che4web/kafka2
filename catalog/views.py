@@ -7,7 +7,7 @@ from django.shortcuts import render
 from django.http import HttpRequest
 from django.template import RequestContext
 from datetime import datetime
-from catalog.models import Album
+from catalog.models import Album, News
 
 from django.views.generic import ListView, DetailView
 
@@ -31,3 +31,5 @@ def album_list(request):
 
 class AlbumDetailView(DetailView):
     model = Album
+class NewsDetailView(DetailView):
+    model = News
