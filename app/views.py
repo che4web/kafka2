@@ -11,7 +11,7 @@ from django.template import RequestContext
 from datetime import datetime
 
 from app.models import BasicData
-from catalog.models import News
+from catalog.models import News, Album
 
 def home(request):
     """Renders the home page."""
@@ -24,6 +24,7 @@ def home(request):
             'year':datetime.now().year,
             'basicdata':BasicData.objects.all()[0],
             'news_list':News.objects.all(),
+            'albums_list':Album.objects.all(),
         }
     )
 

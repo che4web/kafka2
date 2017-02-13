@@ -3,6 +3,63 @@
 {% block content %}
 {% load staticfiles %}
 <section class="main-section" id="main-section">
+    <div class="main-section-block">
+        <div class="main-text">
+            <div class="row main-text-title">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 our-name">
+                    {{basicdata.our_name}}
+                </div>
+            </div>
+            <div class="row main-text-title">
+                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 our-name-descr">
+                    Лучшая художественная ковка в городе
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <a class="btn btn-primary" href="{% url 'catalog' %}">каталог</a>
+                </div>
+            </div>
+            <form class="form-horizontal form-order" action="/sender" method="POST" role="form">
+            {%csrf_token%}
+            <div class="modal-header">
+                    Напишите нам
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="inputName" placeholder="имя">
+                </div>
+                <div class="form-group">
+                    <input type="tel" class="form-control" id="inputTel" placeholder="телефон">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" id="inputDescr" placeholder="описание заказа" rows="4"></textarea>
+                </div>
+
+            </div>
+            <div class="modal-footer modal-footer-form">
+                <button type="submit" class="btn btn-primary">Отправить заявку</button>
+            </div>
+        </form>
+    </div>
+    <div class="main-contacts">
+        <div>
+            <p class="main-tel">{{basicdata.tel}}</p>
+            <p class="main-email">email@test.com</p>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+    
+    
+
+<!--
+
 <div class="container main-section-container">
     <div class="main-section-info">
         <div class="row main-section-container-title">
@@ -18,6 +75,9 @@
         </div>
     </div>
 </div>
+-->
+
+
 </section>
 <section class="info-section" id="info-section">
 <div class="container container-content">
@@ -25,11 +85,24 @@
 
     </div>
     <div class="about-us">
-        <div class="about-us-title">
-
-        </div>
+        
         <div class="about-us-main-descr">
             Мы обеспечиваем наших клиентов <span class="accent-words">уникальной</span>, красивой и долговечной ковкой в исполнении <span class="accent-words">талантливых</span> мастеров. Качественно и не дорого.
+        </div>
+        <div class="about-us-albums">
+            <div class="row albums-list">
+                        {%for album in albums_list%}
+                <div class="card" style="width: 20rem;">
+                    <a href="{{album.get_absolute_url}}">
+                    <img class="card-img-top" src="{{album.get_prewiew}}" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">{{album.title}}</h4>
+                        
+                    </div>
+                        </a>
+                </div>
+                {%endfor%}
+             </div>
         </div>
     </div>
 </div>
