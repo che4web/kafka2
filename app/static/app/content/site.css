@@ -22,7 +22,10 @@ body {
 	font-style: normal;*/
 }
 
-
+@font-face{
+    font-family: "MSMINCHO";
+    src: url("/static/app/fonts/MSMINCHO.TTF") format("truetype");
+}
 
 /* Set padding to keep content from hitting the edges */
 /*.body-content {
@@ -91,7 +94,7 @@ section {
     float:left;
     margin-right:100px;
     max-width:50%;
-    
+    padding-top:50px;
 }
 
 
@@ -102,7 +105,7 @@ section {
 }
 
 .main-text-title{
-    padding-left:200px;
+    padding-left:230px;
 }
 
 .main-contacts{
@@ -112,48 +115,61 @@ section {
     /*color:#fff;*/
     max-width:50%;
     /*text-transform: uppercase;*/
+    font-family:'Candara','MSMINCHO';
     /* font-family: 'El Messiri', sans-serif; */
-    font-family: 'OdessaScript', 'El Messiri', sans-serif;
+    /*font-family: 'OdessaScript', 'El Messiri', sans-serif;*/
     /*font-style: italic;*/
     /*letter-spacing: 20px;*/
-    color: rgb(102, 19, 35);
+    color:#fff;
+    /*color: rgb(102, 19, 35);*/
    
 }
 
 .main-tel{
-    font-size: 80px;
-    
-    text-shadow: 0px 0px 2px #FFFFFF, 0px 0px 4px #ffffde;
+    font-size: 40px;
+    letter-spacing: -2px;
+    text-shadow: rgb(160, 71, 90) 10px 1px 20px;
+    /*text-shadow: 0px 0px 2px #FFFFFF, 0px 0px 4px #ffffde;*/
     /* text-shadow: 0px 0px 4px #fed480, 0px 0px 16px #fed480; */
 }
 
 .main-email{
-     font-size: 60px;
-     text-shadow: 0px 0px 1px #FFFFFF, 0px 0px 2px #ffffde;
+     font-size: 30px;
+     text-shadow: rgb(160, 71, 90) 10px 1px 20px;
+     /*letter-spacing: -2px;*/
+     /*text-shadow: 0px 0px 1px #FFFFFF, 0px 0px 2px #ffffde;*/
  }
 
 .our-name{
     /*top: 20px;
     left: 100px;*/
-    font-size: 120px;
+    font-size: 130px;
     text-transform: uppercase;
+    font-family:'MSMINCHO';
+    /*font-weight:bold;*/
     /*font-family: 'El Messiri', sans-serif;*/
-    font-family: 'OdessaScript', 'El Messiri', sans-serif;
-    font-style: italic;
-    letter-spacing: 20px;
+    /*font-family: 'OdessaScript', 'El Messiri', sans-serif;
+    font-style: italic;*/
+    letter-spacing: -20px;
     color: rgb(102, 19, 35);
-    text-shadow: 0px 0px 4px #FFFFFF, 0px 0px 16px #ffffde;
+    text-shadow: rgb(90, 1, 20) 3px 1px 20px;
+    /*text-shadow: 0px 0px 4px #FFFFFF, 0px 0px 16px #ffffde;*/
     /*text-shadow: 0px 0px 4px #fed480, 0px 0px 16px #fed480;*/
     
 }
 
 .our-name-descr{
     font-size: 30px;
-    font-family: 'OdessaScript', 'El Messiri', sans-serif;
-    font-style: italic;
-    letter-spacing: 2px;
+    /*font-family: 'OdessaScript', 'El Messiri', sans-serif;*/
+    font-family: Candara;
+    /*font-style: italic;*/
+    letter-spacing: 0px;
     color: #fff;
-    text-shadow: 0px 0px 4px rgb(102, 19, 35), 0px 0px 16px rgb(102, 19, 35);
+    text-align:right;
+}
+
+.our-name-btn{
+    text-align:left;
 }
 
 
@@ -175,7 +191,7 @@ section {
     color:#fff
 }
 
-.navbar__phone a{
+.navbar__phone a, .main-contacts a{
     color:inherit;
     text-decoration: none;
 }
@@ -234,6 +250,11 @@ section {
     color:#000;
 }
 
+.our-name-btn .btn{
+    margin-top:15px;
+}
+
+
 @media (max-width: 350px) {
     .main-section-container .btn, .main-section-container button, .form-order button{
     font-size:22px;
@@ -255,8 +276,9 @@ section {
 .info-section .container-content{
     max-width:1280px;
 }
-
-
+.about-us{
+    padding-top: 60px;
+}
 
 .about-us-title{
     font-size:18px;
@@ -354,10 +376,14 @@ section {
 }
 
 .main-text .form-order{
-    margin-top: 100px;
-    width: 50%;
-    height: 50%;
-    margin-left:40px;
+    margin-top: 60px;
+    width: 45%;
+    height: 45%;
+    margin-left:60px;
+}
+
+.main-text .form-order .modal-body{
+    padding:0px;
 }
 
 .main-text .form-order .modal-header{
@@ -369,7 +395,7 @@ section {
 }
 
 .main-text .form-order .btn{
-    font-size:24px;
+    font-size:20px;
     font-family: 'OdessaScript', 'El Messiri', sans-serif;
 }
 
@@ -465,7 +491,7 @@ section {
 
 .info-section .card:hover{
     transform: scale(1.2,1.2);
-    transition: all 2s;
+    transition: all 1s;
 }
 
 .news-img-block{
