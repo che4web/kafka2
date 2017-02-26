@@ -692,3 +692,16 @@ border-color: rgb(102, 19, 35);
     background-color:rgba(0,0,0,0.8);
     color:#fff;
 }
+
+.about-us-main-descr > ul 
+{
+list-style-type:none; 
+text-align:left; 
+padding-left:200px;
+margin-bottom:100px;
+    }
+
+.about-us-main-descr > h3{
+    font-size:1.5pt;
+
+}

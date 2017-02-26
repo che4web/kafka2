@@ -15,13 +15,15 @@
 <h1 >
     {{object.title}}
 </h1>
-    <div class="row albims-list">
+    <div class="row albums-list">
         {%for photo in object.photo_set.all%}
-        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+       <div class="card" style="width: 20rem;">
             <a class="fancybox" rel="gallery1"
                 href="{{photo.img.url}}">
-                <img  src="{{photo.img.preview.url}}" />
+                <img  class="card-img-top"  src="{{photo.img.preview.url}}" />
+
             </a>
+            
         </div>
         {%endfor%}
     </div>

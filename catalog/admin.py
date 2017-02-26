@@ -2,13 +2,12 @@
 
 from django.contrib import admin
 from catalog.models import Album, Photo, News
-
-#class PhotosInline(admin.TabularInline):
-#    model = Photo
+class PhotosInline(admin.TabularInline):
+    model = Photo
 
 @admin.register(Album)
 class AlbumAdmin(admin.ModelAdmin):
-    #inlines =  [PhotosInline,]
+    inlines =  [PhotosInline,]
     list_display=('title','text','order')
 
 @admin.register(News)

@@ -10,7 +10,7 @@ saved_file.connect(generate_aliases_global)
 DEFAULT_PHOTO = "/static/img_sources/default_dish.png"
 class Album(models.Model):
     title = models.CharField(max_length=255)
-    text = models.TextField()
+    text = models.TextField(blank=True)
     order = models.IntegerField()
     preview= models.OneToOneField('Photo',blank=True,null=True)
 
@@ -72,6 +72,12 @@ class Photo(models.Model):
         else:
             return DEFAULT_PHOTO
 
+    def __unicode__(self):
+        return self.album_base.title +"/" +self.name
+    def save(self,*args,**kwargs):
+        if self.name=='':
+            self.name = self.img.name
+        return super(Photo,self).save(*args,**kwargs)
     class Meta:
         verbose_name=u"фото"
         verbose_name_plural=u"фотографии"
