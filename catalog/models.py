@@ -1,5 +1,11 @@
 #! -*- coding=utf8 -*-
 from django.db import models
+from easy_thumbnails.fields import ThumbnailerImageField
+
+from easy_thumbnails.signals import saved_file
+from easy_thumbnails.signal_handlers import generate_aliases_global
+
+saved_file.connect(generate_aliases_global)
 
 DEFAULT_PHOTO = "/static/img_sources/default_dish.png"
 class Album(models.Model):
@@ -18,7 +24,7 @@ class Album(models.Model):
    #     return self.title.encode('utf-8')
     def get_prewiew(self):
         if self.preview:
-            return self.preview.img.url
+            return self.preview.img['preview'].url
         else:
             return DEFAULT_PHOTO
 
@@ -57,7 +63,7 @@ class News(models.Model):
 class Photo(models.Model):
     name = models.CharField(max_length=255,verbose_name=u'название',blank=True)
     descr = models.TextField(verbose_name=u'описание',blank=True)
-    img = models.ImageField(verbose_name=u'фото')
+    img = ThumbnailerImageField(verbose_name=u'фото')
     album_base = models.ForeignKey(Album,verbose_name=u'альбом')
 
     def get_img(self):

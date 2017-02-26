@@ -44,6 +44,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'app',
     'catalog',
+    'easy_thumbnails',
     # Add your apps here to enable them
     'django.contrib.admin',
     'django.contrib.auth',
@@ -52,7 +53,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-
+THUMBNAIL_ALIASES = {
+    '': {
+        'preview': {'size': (250, 180), 'crop': True},
+    },
+}
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
