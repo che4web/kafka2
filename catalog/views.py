@@ -18,7 +18,7 @@ def album_list(request):
         request,
         'catalog/album_list.html',
         {
-            'title':u'Название какое-то',
+            'title':u'Кованные изделия перми. Гелерея наших работ',
             'object_list': Album.objects.all()
         }
     )
@@ -31,5 +31,11 @@ def album_list(request):
 
 class AlbumDetailView(DetailView):
     model = Album
+
+    def get_context_data(self, *args,**kwargs):
+        context= super(AlbumDetailView,self).get_context_data(*args,**kwargs)
+        context['title'] =  u'Кованные изделия перми. Гелерея наших работ: '+ self.object.title
+        return context
+
 class NewsDetailView(DetailView):
     model = News
