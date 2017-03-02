@@ -119,7 +119,7 @@ section {
     /*font-style: italic;*/
     /*letter-spacing: 20px;*/
     color:#fff;
-    /*color: rgb(102, 19, 35);*/
+    /*color: #BD0427;*/
    
 }
 
@@ -150,8 +150,8 @@ section {
     /*font-family: 'OdessaScript', 'El Messiri', sans-serif;
     font-style: italic;*/
     letter-spacing: -20px;
-    color: rgb(102, 19, 35);
-    text-shadow: rgb(90, 1, 20) 3px 1px 20px;
+    color: #BD0427;
+    text-shadow:  #F51A49 3px 1px 20px;
     /*text-shadow: 0px 0px 4px #FFFFFF, 0px 0px 16px #ffffde;*/
     /*text-shadow: 0px 0px 4px #fed480, 0px 0px 16px #fed480;*/
     
@@ -183,7 +183,7 @@ section {
 }
 
 .accent-words{
-    color: rgb(102, 19, 35);
+    color: #BD0427;
 }
 
 .navbar__phone{
@@ -206,7 +206,7 @@ section {
 }
 
 .main-section-container{
-    color:rgb(102, 19, 35);
+    color:#BD0427;
     max-width: 100%;
     height:450px;
     /*padding-top:40px;*/
@@ -234,18 +234,16 @@ section {
 .main-section-container .btn, .main-section-container button,
  .main-text .btn, .main-text button{
     background-color:transparent;
-    border-color:rgb(102, 19, 35);
-    border-radius:0%;
-    border-width:2px;
-    color:rgb(102, 19, 35);
+    border-color:#BD0427;
+    color:#BD0427;
     font-size:30px;
     
 }
 .main-section-container .btn:hover, .main-section-container button:hover,
 .form-order button:hover, .main-text .btn:hover
 {
-    background-color:rgb(102, 19, 35);
-    border-color:rgb(102, 19, 35);
+    background-color:#BD0427;
+    border-color:#BD0427;
     color:#000;
 }
 
@@ -281,7 +279,7 @@ section {
 
 .about-us-title{
     font-size:18px;
-    color:rgb(102, 19, 35);
+    color:#BD0427;
 }
 .about-us-main-descr{
     font-size:28px;
@@ -367,16 +365,18 @@ section {
 }
 
 .form-order{
-    border:2px solid rgb(102, 19, 35);
+    border:2px solid #BD0427;
     margin: auto;
-    max-width:960px;
-    max-height:830px;
+    max-width:610px;
+    max-height:465px;
    
 }
 
 .main-text .form-order{
     margin-top: 60px;
     margin-left:60px;
+    border-radius:10px;
+    background-color: #191A1C;
 }
 
 .main-text .form-order .modal-body{
@@ -467,7 +467,7 @@ section {
     height: 400px;
 }
 .address-map iframe{
-    border:4px solid rgb(102, 19, 35);
+    border:4px solid #BD0427;
 }
 .social-life .icons{
     padding-left:30%;
@@ -496,14 +496,14 @@ section {
     display:inline-block;
     max-width:49%;
     max-height:40%;
-    border:2px solid rgb(102, 19, 35);
+    border:2px solid #BD0427;
     position:relative;
 }
 
 .new-title{
     font-size:48px;
     margin-bottom:5%;
-    color:rgb(102, 19, 35);
+    color:#BD0427;
 }
 
 .new-text{
@@ -577,7 +577,7 @@ section {
     height: auto;
     width: 100%;
     background-size: cover;
-#    border: 4px solid rgb(102, 19, 35);
+#    border: 4px solid #BD0427;
 }
 
  .albums-section .container-content{
@@ -592,7 +592,7 @@ section {
 
 .navbar-kovka{
 background-color:rgba(0, 0, 0, 0.2);
-border-color: #661323;
+border-color: #BD0427;
 #opacity:0.1
 
 }
@@ -603,11 +603,11 @@ border-color: #661323;
 }
 
 .navbar-kovka .navbar-nav > li > a:hover{
-    background-color: #661323;
+    background-color: #BD0427;
 }
 
 a.navbar-brand{
- color:#661323
+ color:#BD0427
 }
 .breadcrumb__container{
 margin-top:50px
@@ -654,8 +654,8 @@ margin:30px
     color: #000;
     font-size: 55px;
     padding: 10%;
-    background-color: rgb(102, 19, 35);
-    border-color: rgb(102, 19, 35);
+    background-color: #BD0427;
+    border-color: #BD0427;
 
     line-height: 1.33;
     border-radius: 0px;
@@ -678,11 +678,11 @@ a:focus, a:hover {
 }
 .btn-primary{
 background-color: rgba(96, 22, 36, 0);
-border-color: rgb(102, 19, 35);
+border-color: #BD0427;
 }
 .btn-primary:hover{
 background-color: #060606;
-border-color: rgb(102, 19, 35);
+border-color: #BD0427;
 }
 
 .form-control:focus{
