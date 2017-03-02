@@ -5,16 +5,26 @@
 <section class="main-section" id="main-section">
     <div class="main-section-block">
         <div class="main-text">
+            <div class="row">
+            <div class="col-md-12">
+        <div class="main-contacts">
+            <div>
+                <p class="main-tel"><a href="tel: {{basicdata.tel}}">{{basicdata.tel}}</a></p>
+                <p class="main-email"><a href="mailto:email@test.com">email@test.com</a></p>
+            </div>
+            </div>
+        </div>
+        </div>
             <div class="row main-text-title">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 our-name">
+                <div class=" our-name">
                     {{basicdata.our_name}}
                 </div>
             </div>
-            <div class="row main-text-title">
-                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 our-name-descr">
+            <div class="row main-text-title subtitle">
+                <div class=" col-md-8  our-name-descr">
                     Лучшая художественная ковка в городе
                 </div>
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 our-name-btn">
+                <div class="col-md-4  our-name-btn">
                     <a class="btn btn-primary" href="{% url 'catalog' %}">каталог</a>
                 </div>
             </div>
@@ -42,12 +52,6 @@
                     <button type="submit" class="btn btn-primary">Отправить заявку</button>
                 </div>
             </form>
-        </div>
-        <div class="main-contacts">
-            <div>
-                <p class="main-tel"><a href="tel: {{basicdata.tel}}">{{basicdata.tel}}</a></p>
-                <p class="main-email"><a href="mailto:email@test.com">email@test.com</a></p>
-            </div>
         </div>
     </div>
 </section>

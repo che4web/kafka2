@@ -93,8 +93,7 @@ section {
 .main-text{
     float:left;
     margin-right:100px;
-    max-width:50%;
-    padding-top:50px;
+    padding-top:0px;
 }
 
 
@@ -102,6 +101,7 @@ section {
 .main-text, .main-contacts{
      /*padding:5px 5px 5px 50px;*/
      /*max-width:35%;*/
+    width:100%
 }
 
 .main-text-title{
@@ -110,10 +110,8 @@ section {
 
 .main-contacts{
     float:right;
-    margin-left:100px;
     text-align:right;
     /*color:#fff;*/
-    max-width:50%;
     /*text-transform: uppercase;*/
     font-family:'Candara','MSMINCHO';
     /* font-family: 'El Messiri', sans-serif; */
@@ -141,6 +139,7 @@ section {
  }
 
 .our-name{
+    margin-top:-100px;
     /*top: 20px;
     left: 100px;*/
     font-size: 130px;
@@ -377,8 +376,6 @@ section {
 
 .main-text .form-order{
     margin-top: 60px;
-    width: 45%;
-    height: 45%;
     margin-left:60px;
 }
 
@@ -705,3 +702,25 @@ margin-bottom:100px;
     font-size:1.5pt;
 
 }
+.fixed-top{
+height: 50px;
+}
+
+.main-text-title.subtitle{
+    width: 50%;
+}
+
+@media (max-width: 992px){
+.main-text-title {
+    padding-left: 0px;
+        }
+.main-text-title .subtitle{
+    width: 100%;
+}
+    }
+        
+@media (max-width: 992px){
+.our-name{
+   font-size: 102px;
+   margin-top:0px
+        }}
