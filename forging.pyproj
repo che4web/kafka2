@@ -152,6 +152,7 @@
     <Content Include="app\static\app\fonts\7fonts.ru_odessa_script_cursive.TTF" />
     <Content Include="app\static\app\fonts\MSMINCHO.TTF" />
     <Content Include="app\static\app\img\back_img.jpg" />
+    <Content Include="app\static\app\img\favicon.ico" />
     <Content Include="app\static\app\img\i1.jpg" />
     <Content Include="app\static\app\img\i2.jpg" />
     <Content Include="app\static\app\img\i3.jpg" />
