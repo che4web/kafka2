@@ -16,7 +16,7 @@
     {{object.title}}
 </h1>
     <div class="row albums-text">
-    {{object.text}}
+    {{object.text| safe}}
     </div>
     <div class="row albums-list">
         {%for photo in object.photo_set.all%}

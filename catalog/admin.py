@@ -4,6 +4,8 @@ from django.contrib import admin
 from catalog.models import Album, Photo, News
 class PhotosInline(admin.TabularInline):
     model = Photo
+    fields=('name','admin_t','img')
+    readonly_fields = ('admin_t',)
 
 @admin.register(Album)
 class AlbumAdmin(admin.ModelAdmin):
@@ -13,7 +15,3 @@ class AlbumAdmin(admin.ModelAdmin):
 @admin.register(News)
 class NewsAdmin(admin.ModelAdmin):
     pass
-@admin.register(Photo)
-class PhotosInline(admin.ModelAdmin):
-    pass
-    #list_display=('name','descr',)
