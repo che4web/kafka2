@@ -1,0 +1,26 @@
+# You may add here your
+server {
+	listen   80; ## listen for ipv4; this line is default and implied
+
+	index index.html index.htm;
+
+	# Make site accessible from http://localhost/
+	server_name test3.4web.tech ;
+	root /var/www/test/kafka2;
+	
+#    location /media {
+#		root /var/www/test/video/;
+#	}
+#
+	location / {
+		proxy_pass http://localhost:8083/;
+		proxy_set_header Host $host;
+		proxy_set_header X-Real-IP $remote_addr;
+		proxy_set_header X-Forwarded-For $remote_addr;
+		proxy_connect_timeout 120;
+		proxy_send_timeout 120;
+		proxy_read_timeout 180;
+	}
+#
+}
+
