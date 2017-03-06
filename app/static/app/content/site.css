@@ -240,6 +240,10 @@ section {
     font-size:30px;
     
 }
+.main-text .btn {
+    font-size:32px;
+}
+
 .main-section-container .btn:hover, .main-section-container button:hover,
 .form-order button:hover, .main-text .btn:hover
 {
@@ -341,7 +345,6 @@ section {
 .main-text .form-order .modal-header{
    border-bottom: none;
    text-align: right;
-   font-style:italic;
    color:#fff;
     font-family: 'OdessaScript', 'El Messiri', sans-serif;
 }
@@ -360,12 +363,14 @@ section {
 .form-order input, .form-order textarea{
     background-color:transparent;
     border: none;
-    border-bottom: 4px solid #fff;
+    border-bottom: 2px solid #fff;
+    border-top: 1px solid;
     width:auto;
     margin: 0 auto;
     width:80%;
     max-width:90%;
     margin-top:3%;
+    border-radius:0px;
 }
 
 .modal-footer {
@@ -687,8 +692,16 @@ color: #fed480;
 
 a:focus, a:hover {
     color: #fbf3e3;
-   # text-decoration: underline;
 }
+
+.info-section a{
+    text-decoration: none;
+    }
+
+.info-section h4{
+    text-align:center;
+    }
+
 .btn-primary{
 background-color: rgba(96, 22, 36, 0);
 border-color: #af183c;
