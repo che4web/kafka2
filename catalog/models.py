@@ -1,5 +1,6 @@
 #! -*- coding=utf8 -*-
 from django.db import models
+from django.utils.safestring import mark_safe
 from easy_thumbnails.fields import ThumbnailerImageField
 
 from easy_thumbnails.signals import saved_file
@@ -81,3 +82,7 @@ class Photo(models.Model):
     class Meta:
         verbose_name=u"фото"
         verbose_name_plural=u"фотографии"
+    def admin_t(self):
+        return mark_safe(u'<img src="%s" />' % (self.img['preview'].url))
+    admin_t.description = 'Thumbnail'
+    admin_t.allow_tags = True

@@ -795,7 +795,7 @@ margin-bottom:100px;
 
 
 .fixed-top{
-height: 50px;
+min-height: 50px;
 }
 
 .main-text-title.subtitle{

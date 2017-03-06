@@ -20,7 +20,7 @@ def home(request):
         request,
         'app/index.html',
         {
-            'title':'Изготовление кованых изделий на заказ в перми. Ковак Пермь',
+            'title':'Изготовление кованых изделий на заказ в перми. Ковкa Пермь',
             'year':datetime.now().year,
             'basicdata':BasicData.objects.all()[0],
             'news_list':News.objects.all(),
