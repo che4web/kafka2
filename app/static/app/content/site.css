@@ -854,3 +854,9 @@ min-height: 50px;
    font-size: 64px;
    margin-top:0px
         }}
+
+
+.navbar-inverse .navbar-nav .nav-link {
+color: rgba(255, 255, 255, 0.87);
+font-size: 1.2rem;
+}
