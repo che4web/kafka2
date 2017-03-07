@@ -859,6 +859,7 @@ min-height: 50px;
         }}
 
 
+<<<<<<< HEAD
 .modalform input, select, textarea {
         max-width: 100%; 
 }
@@ -874,8 +875,9 @@ min-height: 50px;
 }
 h1{
 color: #fff;
-}
+=======
 .navbar-inverse .navbar-nav .nav-link {
 color: rgba(255, 255, 255, 0.87);
 font-size: 1.2rem;
+>>>>>>> 986bc13e6a3adc8ac905ffd733ecdd76a2a8d880
 }
