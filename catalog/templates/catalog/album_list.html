@@ -1,4 +1,4 @@
-﻿{% extends "app/layout.html" %}
+﻿{% extends "app/layout2.html" %}
 {% block breadcrumb%}
 <ol class="breadcrumb">
     <li class="breadcrumb-item "><a href='/'>Главная</a></li>
@@ -7,16 +7,13 @@
 </ol>
 {% endblock %}
 
-{% block content %}
+{% block content_iner %}
 {% load staticfiles %}
 <section class="albums-section" id="albums-section">
 <div class="container container-content">
-<h1>
-    Наши работы
-</h1>
     <div class="row albums-list">
         {%for album in object_list%}
-<div class="card" style="width: 20rem;">
+<div class="card" style="width: 15rem;">
     <img class="card-img-top" src="{{album.get_prewiew}}" alt="Card image cap">
     <div class="card-block">
         <h4 class="card-title">{{album.title}}</h4>

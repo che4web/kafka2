@@ -1,0 +1,33 @@
+﻿{% extends "app/layout.html" %}
+{% block content %}
+
+<div class="container">
+<div class="row">
+    <div class="col-md-12">
+        <h1>{{page_title}}</h1>
+        </div>
+</div>
+    
+<div class="row">
+    <div class="col-md-9">
+        {% block content_iner%}
+        {% endblock %}
+    </div>
+    <div class="col-md-3">
+        {% block content_side %}
+<div class="card sidebar" >
+  <h4 class="card-title">Каталог</h4>
+             <nav class="nav flex-column">
+                {%for item in album_list%}
+                <a class="nav-link" href={{item.get_absolute_url}}> {{item.title}}</a>
+                {%endfor%}
+                </nav>
+            </ul>
+        </div>
+        {% endblock %}
+    </div>
+</div>
+</div>
+
+
+{% endblock %}

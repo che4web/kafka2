@@ -1,4 +1,4 @@
-﻿{% extends "app/layout.html" %}
+﻿{% extends "app/layout2.html" %}
 
 {% block breadcrumb%}
 <ol class="breadcrumb">
@@ -8,19 +8,16 @@
 
 </ol>
 {% endblock %}
-{% block content %}
+{% block content_iner %}
 {% load staticfiles %}
 <section class="albums-section">
 <div class="container container-content">
-<h1 >
-    {{object.title}}
-</h1>
     <div class="row albums-text">
     {{object.text| safe}}
     </div>
     <div class="row albums-list">
         {%for photo in object.photo_set.all%}
-       <div class="card" style="width: 20rem;">
+       <div class="card" style="width: 15rem;">
             <a class="fancybox" rel="gallery1"
                 href="{{photo.img.url}}">
                 <img  class="card-img-top"  src="{{photo.img.preview.url}}" />

@@ -26,32 +26,11 @@
                 </div>
                 <div class="col-md-4  our-name-btn">
                     <a class="btn btn-primary" href="{% url 'catalog' %}">каталог</a>
+        <button type="button" class="btn btn-primary btn-small" data-toggle="modal" data-target="#callbackModal">
+             Напиши нам 
+        </button>
                 </div>
             </div>
-            <form class="form-horizontal form-order" action="/sender" method="POST" role="form">
-                {%csrf_token%}
-                <div class="modal-header">
-                        Напишите нам
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="inputName" placeholder="имя">
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" class="form-control" id="inputTel" placeholder="телефон">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="inputEmail3" placeholder="e-mail">
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" id="inputDescr" placeholder="описание заказа" rows="4"></textarea>
-                    </div>
-
-                </div>
-                <div class="modal-footer modal-footer-form">
-                    <button type="submit" class="btn btn-primary">Отправить заявку</button>
-                </div>
-            </form>
         </div>
     </div>
 </section>
@@ -273,5 +252,38 @@ function onScroll(event){
     
 
     </script>
+    <div class="modal fade modalform" id="callbackModal">
+          <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+            <form class="form-horizontal " action="/sender" method="POST" role="form">
+                {%csrf_token%}
+                <div class="modal-header">
+                    <h5 class="modal-title" >
+                        Заказать звонок
+                        </h5>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="inputName" placeholder="имя">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-control" id="inputTel" placeholder="телефон">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="inputEmail3" placeholder="e-mail">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="inputDescr" placeholder="описание заказа" rows="4"></textarea>
+                    </div>
+
+                </div>
+                <div class="modal-footer modal-footer-form">
+                    <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                </div>
+            </form>
+                </div>
+                  </div>
+    </div>
 
     {% endblock %}
+

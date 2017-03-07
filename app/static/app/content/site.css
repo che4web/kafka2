@@ -243,6 +243,9 @@ section {
 .main-text .btn {
     font-size:32px;
 }
+.main-text .btn.btn-small {
+    font-size:18px;
+}
 
 .main-section-container .btn:hover, .main-section-container button:hover,
 .form-order button:hover, .main-text .btn:hover
@@ -498,12 +501,12 @@ section {
 
 .info-section .card{
     transform: scale(1,1);
-    transition: all 2s;
+    transition: all 0.7s;
 }
 
 .info-section .card:hover{
     transform: scale(1.2,1.2);
-    transition: all 1s;
+    transition: all 0.7s;
 }
 
 .news-img-block{
@@ -854,3 +857,21 @@ min-height: 50px;
    font-size: 64px;
    margin-top:0px
         }}
+
+
+.modalform input, select, textarea {
+        max-width: 100%; 
+}
+.modalform .btn-primary{
+ background-color:#af183c
+}
+.card.sidebar {
+ background-color:#292b2c
+}
+.sidebar .card-title{
+    color:#fff;
+        padding: 15px;
+}
+h1{
+color: #fff;
+}
