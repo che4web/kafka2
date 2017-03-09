@@ -157,6 +157,7 @@
     <Content Include="app\static\app\img\i2.jpg" />
     <Content Include="app\static\app\img\i3.jpg" />
     <Content Include="app\static\app\img\i4.jpg" />
+    <Content Include="app\static\app\img\title.png" />
     <Content Include="catalog\templates\catalog\album_detail.html" />
     <Content Include="catalog\templates\catalog\album_list.html" />
     <Content Include="catalog\templates\index.html" />

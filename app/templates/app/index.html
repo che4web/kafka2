@@ -17,17 +17,17 @@
         </div>
             <div class="row main-text-title">
                 <div class="our-name">
-                    {{basicdata.our_name}}
+                    <img src="{% static 'app/img/title.png' %}" />
                 </div>
             </div>
             <div class="row main-text-title subtitle">
-                <div class=" col-md-8  our-name-descr">
+                <div class="col-md-8  our-name-descr">
                     Лучшая художественная ковка в городе
                 </div>
                 <div class="col-md-4  our-name-btn">
                     <a class="btn btn-primary" href="{% url 'catalog' %}">каталог</a>
         <button type="button" class="btn btn-primary btn-small" data-toggle="modal" data-target="#callbackModal">
-             Напиши нам 
+             напишите нам 
         </button>
                 </div>
             </div>
@@ -94,12 +94,15 @@
                 <input type="email" class="form-control" id="inputEmail3" placeholder="e-mail">
             </div>
             <div class="form-group">
-                <textarea class="form-control" id="inputDescr" placeholder="описание заказа" rows="4"></textarea>
+                <textarea class="form-control" id="inputDescr" placeholder="
+
+
+описание заказа" rows="4"></textarea>
             </div>
 
         </div>
         <div class="modal-footer modal-footer-form">
-            <button type="submit" class="btn btn-primary">Отправить заявку</button>
+            <button type="submit" class="btn btn-primary">отправить заявку</button>
         </div>
     </form>
 </div>
@@ -116,7 +119,10 @@
                 <div class="card-block">
                     <h4 class="card-title">{{news.title}}</h4>
                     <p class="card-text">{{news.text }}</p>
-                    <a href="{{news.get_absolute_url}}" class="btn btn-primary">Подробней</a>
+                    
+                </div>
+                <div class="card-footer">
+                    <a href="{{news.get_absolute_url}}" class="btn btn-primary">подробней</a>
                 </div>
             </div>
             {%endfor%}
@@ -137,7 +143,7 @@
                 </div>
                 <div class="point">
                     г. Пермь, с. Култаево <br>
-                    улица <span class="accent-words">Романа Кашина</span>, 21
+                    улица <span class="accent-words">Романа Кашина</span>, 94/1
                 </div>
             </div>
         </div>
@@ -151,7 +157,7 @@
         </div>
     </div>
 </div>
-<div class=" address-map">
+<div class="address-map">
 </div>
 <div class="container container-content">
     <div class="row address">
@@ -188,8 +194,10 @@
                 {%csrf_token%}
                 <div class="modal-header">
                     <h5 class="modal-title" >
-                        Заказать звонок
-                        </h5>
+                        Напишите нам!
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
@@ -217,7 +225,7 @@
     <script>
         $(document).ready(function () {
             $('.address-map').append(
-    '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2115.285477631471!2d56.23423031600246!3d57.98299898120814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e8c0c813763261%3A0x86dd4b3733380539!2z0YPQuy4g0JzQsNGA0YjRgNGD0YLQvdCw0Y8sIDIxLCDQn9C10YDQvNGMLCDQn9C10YDQvNGB0LrQuNC5INC60YDQsNC5LCA2MTQxMTE!5e0!3m2!1sru!2sru!4v1486493723555" width="100%" height="100%" allowfullscreen></iframe>')
+    '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2120.4888251198736!2d55.94041601606205!3d57.894828832236165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e8bcb2f9d8ffe1%3A0x912d17058a44d42a!2z0YPQuy4g0JrQsNGI0LjQvdCwLCDQmtGD0LvRgtCw0LXQstC-LCDQn9C10YDQvNGB0LrQuNC5INC60YDQsNC5LCA2MTQ1MjA!5e0!3m2!1sru!2sru!4v1489082316882" width="100%" height="100%" allowfullscreen></iframe>')
             $("#navbarCollapse .go").on("click", "a", function (event) {
                 //отменяем стандартную обработку нажатия по ссылке
                 event.preventDefault();
