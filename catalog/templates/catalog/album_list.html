@@ -18,7 +18,9 @@
     <div class="card-block">
         <h4 class="card-title">{{album.title}}</h4>
         <p class="card-text">{{album.text |slice:":100"|safe }} {%if album.text|length > 100 %} ... {%endif%}</p>
-        <a href="{{album.get_absolute_url}}" class="btn btn-primary">Подробней</a>
+    </div>
+    <div class="card-footer">
+        <a href="{{album.get_absolute_url}}" class="btn btn-primary ">Подробней</a>
     </div>
 </div>
 {%endfor%}
