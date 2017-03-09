@@ -260,6 +260,7 @@ section {
     background-color:#af183c;
     border-color:#af183c;
     color:#000;
+    cursor: pointer;
 }
 
 .our-name-btn .btn{
