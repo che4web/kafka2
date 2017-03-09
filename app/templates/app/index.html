@@ -1,4 +1,4 @@
-﻿{% extends "app/layout.html" %}
+{% extends "app/layout.html" %}
 
 {% block content %}
 {% load staticfiles %}
@@ -181,6 +181,39 @@
     </section>
 
 
+    <div class="modal fade modalform" id="callbackModal">
+          <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+            <form class="form-horizontal " action="/sender" method="POST" role="form">
+                {%csrf_token%}
+                <div class="modal-header">
+                    <h5 class="modal-title" >
+                        Заказать звонок
+                        </h5>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="inputName" placeholder="имя">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-control" id="inputTel" placeholder="телефон">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="inputEmail3" placeholder="e-mail">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="inputDescr" placeholder="описание заказа" rows="4"></textarea>
+                    </div>
+
+                </div>
+                <div class="modal-footer modal-footer-form">
+                    <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                </div>
+            </form>
+                </div>
+                  </div>
+    </div>
+
     <script>
         $(document).ready(function () {
             $('.address-map').append(
@@ -227,7 +260,7 @@ $('.navbar-nav a[href^="#"]').on('click', function (e) {
          menu = target;
          $target = $(target);
        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top-$('.navbar-header').height()
+            'scrollTop': $target.offset().top-$('#main-navbar').height()
         }, 600, 'swing', function () {
             $(document).on("scroll", onScroll);
         });
@@ -252,38 +285,5 @@ function onScroll(event){
     
 
     </script>
-    <div class="modal fade modalform" id="callbackModal">
-          <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-            <form class="form-horizontal " action="/sender" method="POST" role="form">
-                {%csrf_token%}
-                <div class="modal-header">
-                    <h5 class="modal-title" >
-                        Заказать звонок
-                        </h5>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="inputName" placeholder="имя">
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" class="form-control" id="inputTel" placeholder="телефон">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="inputEmail3" placeholder="e-mail">
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" id="inputDescr" placeholder="описание заказа" rows="4"></textarea>
-                    </div>
-
-                </div>
-                <div class="modal-footer modal-footer-form">
-                    <button type="submit" class="btn btn-primary">Отправить заявку</button>
-                </div>
-            </form>
-                </div>
-                  </div>
-    </div>
-
     {% endblock %}
 
