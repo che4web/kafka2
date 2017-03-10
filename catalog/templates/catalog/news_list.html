@@ -13,19 +13,30 @@
 <div class="container container-content">
     <div class="row albums-list">
         {%for album in object_list%}
-<div class="card" style="width: 15rem;">
-    <img class="card-img-top" src="{{album.get_prewiew}}" alt="Card image cap">
-    <div class="card-block">
-        <h4 class="card-title">{{album.title}}</h4>
-        <p class="card-text">{{album.text |slice:":100"|safe }} {%if album.text|length > 100 %} ... {%endif%}</p>
-    </div>
-    <div class="card-footer">
-        <a href="{{album.get_absolute_url}}" class="btn btn-primary ">Подробней</a>
-    </div>
-</div>
-{%endfor%}
+            <div class="card" style="width: 15rem;">
+                <img class="card-img-top" src="{{album.get_prewiew}}" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">{{album.title}}</h4>
+                    <p class="card-text">{{album.text |slice:":100"|safe }} {%if album.text|length > 100 %} ... {%endif%}</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{{album.get_absolute_url}}" class="btn btn-primary ">Подробней</a>
+                </div>
+            </div>
+        {%endfor%}
 
     </div>
 </div>
 </section>
+{% endblock %}
+
+{% block content_side %}
+<div class="card sidebar" >
+          <h4 class="card-title">Список новостей</h4>
+        <nav class="nav flex-column">
+        {%for item in object_list%}
+            <a class="nav-link" href={{item.get_absolute_url}}> {{item.title}}</a>
+        {%endfor%}
+        </nav>
+            </div>
 {% endblock %}

@@ -158,8 +158,11 @@
     <Content Include="app\static\app\img\i3.jpg" />
     <Content Include="app\static\app\img\i4.jpg" />
     <Content Include="app\static\app\img\title.png" />
+    <Content Include="app\templates\app\layout2.html" />
     <Content Include="catalog\templates\catalog\album_detail.html" />
     <Content Include="catalog\templates\catalog\album_list.html" />
+    <Content Include="catalog\templates\catalog\news_detail.html" />
+    <Content Include="catalog\templates\catalog\news_list.html" />
     <Content Include="catalog\templates\index.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />

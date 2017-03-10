@@ -8,34 +8,39 @@
 
 </ol>
 {% endblock %}
+
 {% block content %}
 {% load staticfiles %}
-<section class="albums-section">
-<div class="container container-content">
-<h1 >
-    {{object.title}}
-</h1>
-  {{object.text}}
-    <div class="row albims-list">
-        {%for photo in object.photo_set.all%}
-        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <a class="fancybox" rel="gallery1"
-                href="{{photo.img.url}}">
-                <img  src="{{photo.img.url}}" />
-            </a>
-        </div>
-        {%endfor%}
-    </div>
-</div>
-</section>
+    <section class="albums-section">
+    <div class="container container-content">
+    <h1 >
+        {{object.title}}
+    </h1>
+        <div class="row albums-text">
+      {{object.text| safe}}
+            </div>
+        <div class="row albums-list">
+            {%for photo in object.photo_set.all%}
+                <div class="card" style="width: 15rem;">
+                    <a class="fancybox" rel="gallery1"
+                        href="{{photo.img.url}}">
+                        <img  class="card-img-top"  src="{{photo.img.preview.url}}" />
 
-<script>
-    $(document).ready(function() {
-    $(".fancybox").fancybox({
-      padding: 0 ,
-    openEffect	: 'none',
-    closeEffect	: 'none'
-    });
-    })
-</script>
+                    </a>
+            
+                </div>
+            {%endfor%}
+        </div>
+    </div>
+    </section>
+
+    <script>
+        $(document).ready(function() {
+        $(".fancybox").fancybox({
+          padding: 0 ,
+        openEffect	: 'none',
+        closeEffect	: 'none'
+        });
+        })
+    </script>
 {% endblock %}
