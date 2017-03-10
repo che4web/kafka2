@@ -1,9 +1,9 @@
-﻿{% extends "app/layout.html" %}
+﻿{% extends "app/layout2.html" %}
 
 {% block breadcrumb%}
 <ol class="breadcrumb">
     <li class="breadcrumb-item "><a href='/'>Главная</a></li>
-    <li class="breadcrumb-item active"><a href="{% url 'catalog'%}">Каталог</a></li>
+    <li class="breadcrumb-item active"><a href="{% url 'news-list'%}">Новости</a></li>
         <li class="breadcrumb-item active">{{object.title}}</li>
 
 </ol>

@@ -1,0 +1,31 @@
+﻿{% extends "app/layout2.html" %}
+{% block breadcrumb%}
+<ol class="breadcrumb">
+    <li class="breadcrumb-item "><a href='/'>Главная</a></li>
+
+    <li class="breadcrumb-item active">Новости</li>
+</ol>
+{% endblock %}
+
+{% block content_iner %}
+{% load staticfiles %}
+<section class="albums-section" id="albums-section">
+<div class="container container-content">
+    <div class="row albums-list">
+        {%for album in object_list%}
+<div class="card" style="width: 15rem;">
+    <img class="card-img-top" src="{{album.get_prewiew}}" alt="Card image cap">
+    <div class="card-block">
+        <h4 class="card-title">{{album.title}}</h4>
+        <p class="card-text">{{album.text |slice:":100"|safe }} {%if album.text|length > 100 %} ... {%endif%}</p>
+    </div>
+    <div class="card-footer">
+        <a href="{{album.get_absolute_url}}" class="btn btn-primary ">Подробней</a>
+    </div>
+</div>
+{%endfor%}
+
+    </div>
+</div>
+</section>
+{% endblock %}

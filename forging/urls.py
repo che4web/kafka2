@@ -51,6 +51,7 @@ urlpatterns = [
 
     url(r'^catalog/$', catalog.views.album_list, name='catalog'),
     url(r'^catalog/(?P<pk>\d+)/$', catalog.views.AlbumDetailView.as_view(), name='album-detail'),
+    url(r'^news/$', catalog.views.news_list, name='news-list'),
     url(r'^news/(?P<pk>\d+)/$', catalog.views.NewsDetailView.as_view(), name='news-detail'),
     #url(r'^news2$', views.NewsListView.as_view(), name='news-list2'),
 ]

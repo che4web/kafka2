@@ -157,6 +157,7 @@
         </div>
     </div>
 </div>
+<div class="overlay" onClick="style.pointerEvents='none'"></div>
 <div class="address-map">
 </div>
 <div class="container container-content">
@@ -225,8 +226,9 @@
     <script>
         $(document).ready(function () {
             $('.address-map').append(
-    '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2120.4888251198736!2d55.94041601606205!3d57.894828832236165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e8bcb2f9d8ffe1%3A0x912d17058a44d42a!2z0YPQuy4g0JrQsNGI0LjQvdCwLCDQmtGD0LvRgtCw0LXQstC-LCDQn9C10YDQvNGB0LrQuNC5INC60YDQsNC5LCA2MTQ1MjA!5e0!3m2!1sru!2sru!4v1489082316882" width="100%" height="100%" allowfullscreen></iframe>')
+    '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2120.4888251198736!2d55.94041601606205!3d57.894828832236165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e8bcb2f9d8ffe1%3A0x912d17058a44d42a!2z0YPQuy4g0JrQsNGI0LjQvdCwLCDQmtGD0LvRgtCw0LXQstC-LCDQn9C10YDQvNGB0LrQuNC5INC60YDQsNC5LCA2MTQ1MjA!5e0!3m2!1sru!2sru!4v1489082316882" scrollwheel=false  width="100%" height="100%" allowfullscreen></iframe>')
             $("#navbarCollapse .go").on("click", "a", function (event) {
+
                 //отменяем стандартную обработку нажатия по ссылке
                 event.preventDefault();
                 //забираем идентификатор бока с атрибута href
@@ -291,7 +293,13 @@ function onScroll(event){
     });
 }
     
-
+$(document).ready(function(){
+	$('.overlay').click(function() {
+		$(this).remove();
+	});
+});
     </script>
+	
+	
     {% endblock %}
 
