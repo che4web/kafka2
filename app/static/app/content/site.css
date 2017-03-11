@@ -206,8 +206,8 @@ section {
     text-decoration: none;
 }
 
-.navbar__phone a:hover{
-    color: #fed480;
+#navbarCollapse a:hover{
+    color: #fbf3e3;
     text-decoration: none;
 }
 
@@ -877,18 +877,6 @@ min-height: 50px;
    margin-top:0px
         }}
 
-
-.modalform input, select, textarea {
-        max-width: 100%; 
-}
-.modalform .btn-primary{
- background-color:#af183c
-}
-
-.modalform .btn-primary:hover{
- cursor:pointer;
-}
-
 .card.sidebar {
     background-color:#292b2c;
     margin-top: 17px;
@@ -920,3 +908,54 @@ font-size: 1.2rem;
 	top:550px;
 	margin-top:-550px;
 }
+
+.form-order, .form-order input, .form-order button, .form-order textarea  {
+    font-family:Candara;
+    font-size:18px;
+}
+
+.modal-content .form-horizontal, .modal-content .form-horizontal input, .modal-content .form-horizontal button, .modal-content .form-horizontal textarea {
+    font-family:Candara;
+    font-size:18px;
+    
+    background-color: rgb(25,26,28);
+    color: #fff;
+}
+
+.modal-content .form-horizontal {
+    border: 4px solid #af183c;
+}
+
+.modal-content .form-horizontal input, .modal-content .form-horizontal textarea{
+    border: none;
+    border-bottom: 2px solid #fff;
+}
+
+.modal-content .form-horizontal input:focus, .modal-content .form-horizontal textarea:focus{
+    border-color: #5cb3fd;
+    color:#fff;
+}
+
+.modal-content .modal-header{
+    border-bottom:none;
+}
+
+.modalform input, select, textarea {
+        max-width: 100%; 
+        max-height:500px;
+}
+.modal-content .form-horizontal .btn-primary:hover{
+    background-color: #af183c;
+    border-color: #af183c;
+    color: #fff;
+    cursor: pointer;
+    }
+
+/*
+.modalform .btn-primary{
+ background-color:#af183c
+}
+
+.modalform .btn-primary:hover{
+ cursor:pointer;
+}*/
