@@ -47,7 +47,7 @@
         <div class="about-us-albums">
             <div class="row albums-list">
                         {%for album in albums_list%}
-                <div class="card" style="width: 20rem;">
+                <div class="card" style="width: 11rem;">
                     <a href="{{album.get_absolute_url}}">
                         <img class="card-img-top" src="{{album.get_prewiew}}" alt="Card image cap">
                         <div class="card-block">
@@ -58,6 +58,13 @@
                 {%endfor%}
              </div>
         </div>
+    </div>
+</div>
+</section>
+
+<section class=" section-advantages" >
+    <div class="container">
+
         <div class="about-us-main-descr">
             <p> <h2> Преимущества<span class="accent-words"> кованого металла</span>:</h2>
                 <ul>
@@ -70,10 +77,14 @@
                     <li><span class="accent-words">Ковка прекрасно сочетается с другими материалами</span></li>
                 </ul>
             </p>
+        </div>
+</section>
+<section class="info-section " id="order-section">
+    <div class="container">
+        <div class="about-us-main-descr">
             <p>Перечень <span class="accent-words">достоинств</span> получается довольно большим, причем его можно продолжать. Если же охарактеризовать <span class="accent-words">кованый металл</span> в нескольких словах, то получится, что такие изделия сочетают в себе <span class="accent-words"> красоту</span>, долговечность и <span class="accent-words"> хорошую</span> функциональность.</p>
         </div>
-    </div>
-</div>
+        </div>
 </section>
 <section class="order-section" id="order-section">
 <div class="container container-content">
