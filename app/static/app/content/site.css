@@ -69,7 +69,7 @@ input[type="checkbox"].input-validation-error {
 html, body {
     margin: 0;
     padding: 0;
-     font-family:Candara;
+    /* font-family:Candara; */
 }
 
 section {
@@ -734,6 +734,7 @@ a:focus, a:hover {
 
 .info-section h4{
     text-align:center;
+    font-size:1rem;
     }
 
 .btn-primary{
@@ -899,10 +900,7 @@ background-color: #000000!important; }
 h1{
 color: #fff;
 }
-.navbar-inverse .navbar-nav .nav-link {
-color: rgba(255, 255, 255, 0.87);
-font-size: 1.2rem;
-}
+.navbar-inverse .navbar-nav .nav-link {color: rgba(255, 255, 255, 0.87);font-size: 1.2rem;}
 .card-footer{
     background-color:#292b2c;
     text-align: right;
