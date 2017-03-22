@@ -133,7 +133,7 @@ section {
 }
 
 .main-tel{
-    font-size: 40px;
+    font-size: 30px;
     letter-spacing: -2px;
     text-shadow: rgb(160, 71, 90) 10px 1px 20px;
     /*text-shadow: 0px 0px 2px #FFFFFF, 0px 0px 4px #ffffde;*/
@@ -141,7 +141,7 @@ section {
 }
 
 .main-email{
-     font-size: 30px;
+     font-size: 22px;
      text-shadow: rgb(160, 71, 90) 10px 1px 20px;
      /*letter-spacing: -2px;*/
      /*text-shadow: 0px 0px 1px #FFFFFF, 0px 0px 2px #ffffde;*/
@@ -167,7 +167,7 @@ section {
 }
 
 .our-name-descr{
-    font-size: 30px;
+    font-size: 22px;
     /*font-family: 'OdessaScript', 'El Messiri', sans-serif;*/
     font-family: Candara;
     /*font-style: italic;*/
@@ -252,7 +252,7 @@ section {
     
 }
 .main-text .btn {
-    font-size:32px;
+    font-size:25px;
 }
 .main-text .btn{
     font-family: Candara;
@@ -303,7 +303,7 @@ section {
     color:#af183c;
 }
 .about-us-main-descr{
-    font-size:28px;
+    font-size:18px;
     word-wrap: break-word;
     text-align: center;
 }
@@ -959,3 +959,6 @@ font-size: 1.2rem;
 .modalform .btn-primary:hover{
  cursor:pointer;
 }*/
+.bg-inverse {
+        background-color: #000000 !important;
+}
