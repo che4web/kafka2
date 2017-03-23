@@ -1,6 +1,8 @@
 #! -*- coding=utf8 -*-
 from django.db import models
 from django.utils.safestring import mark_safe
+from django.template import defaultfilters
+from unidecode import unidecode
 from easy_thumbnails.fields import ThumbnailerImageField
 
 from easy_thumbnails.signals import saved_file
@@ -11,13 +13,24 @@ saved_file.connect(generate_aliases_global)
 DEFAULT_PHOTO = "/static/img_sources/default_dish.png"
 class Album(models.Model):
     title = models.CharField(max_length=255)
+    
+    desctiption = models.CharField(max_length=255,blank=True)
     text = models.TextField(blank=True)
     order = models.IntegerField()
     preview= models.OneToOneField('Photo',blank=True,null=True)
+    
+    slug = models.SlugField(verbose_name=u'URL страницы',
+                            help_text=u'Например, uslugi',
+                            blank=True,
+                            unique=False)
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = defaultfilters.slugify(unidecode(self.title))
+        return super(Album, self).save(*args, **kwargs)
 
     @models.permalink
     def get_absolute_url(self):
-        return ('album-detail', [self.id])
+        return ('album-detail-slug', [self.slug])
 
     def __unidoce__(self):
         return self.title.encode('utf-8')
@@ -37,14 +50,23 @@ class Album(models.Model):
 
 class News(models.Model):
     title = models.CharField(max_length=255)
+    desctiption = models.CharField(max_length=255,blank=True)
     text = models.TextField()
     order = models.IntegerField()
     preview= models.OneToOneField('Photo',blank=True)
     date = models.DateField(auto_now=True)
+    slug = models.SlugField(verbose_name=u'URL страницы',
+                            help_text=u'Например, uslugi',
+                            blank=True,
+                            unique=False)
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = defaultfilters.slugify(unidecode(self.title))
+        return super(News, self).save(*args, **kwargs)
 
     @models.permalink
     def get_absolute_url(self):
-        return ('news-detail', [self.id])
+        return ('news-detail-slug', [self.slug])
 
     def __unidoce__(self):
         return self.title.encode('utf-8')

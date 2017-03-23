@@ -56,6 +56,7 @@ class AlbumDetailView(DetailView):
         context= super(AlbumDetailView,self).get_context_data(*args,**kwargs)
         context['title'] =  u'Кованые изделия перми. Галерея наших работ: '+ self.object.title
         context['page_title'] =  self.object.title
+        context['desctiption'] =  self.object.desctiption 
         return context
 
 class NewsDetailView(DetailView):
