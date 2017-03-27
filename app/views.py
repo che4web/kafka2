@@ -12,6 +12,7 @@ from datetime import datetime
 
 from app.models import BasicData
 from catalog.models import News, Album
+from catalog.forms import ContactForm
 
 def home(request):
     """Renders the home page."""
@@ -25,6 +26,7 @@ def home(request):
             'basicdata':BasicData.objects.all()[0],
             'news_list':News.objects.all(),
             'albums_list':Album.objects.all(),
+            'form': ContactForm()
         }
     )
 

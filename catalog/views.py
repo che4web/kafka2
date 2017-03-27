@@ -6,10 +6,16 @@ Definition of views.
 from django.shortcuts import render
 from django.http import HttpRequest
 from django.template import RequestContext
+from django.shortcuts import HttpResponse
+import json
+from django.http import HttpResponseBadRequest
+
 from datetime import datetime
 from catalog.models import Album, News
 
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, FormView
+from catalog.forms import ContactForm
+
 
 def album_list(request):
     """Renders the about page."""
@@ -61,3 +67,15 @@ class AlbumDetailView(DetailView):
 
 class NewsDetailView(DetailView):
     model = News
+
+class ContactFormView(FormView):
+    form_class=ContactForm
+    template_name='contact.html'
+
+    def form_valid(self,form):
+        form.send_email()
+        return HttpResponse('Ok')
+
+    def form_invalid(self, form):
+        errors_dict = json.dumps(dict([(k, [e for e in v]) for k, v in form.errors.items()]))
+        return HttpResponseBadRequest(json.dumps(errors_dict))

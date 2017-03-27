@@ -55,6 +55,7 @@ urlpatterns = [
     url(r'^news/$', catalog.views.news_list, name='news-list'),
     url(r'^news/(?P<slug>.+)/$', catalog.views.NewsDetailView.as_view(), name='news-detail-slug'),
     url(r'^news/(?P<pk>\d+)/$', catalog.views.NewsDetailView.as_view(), name='news-detail'),
+    url(r'^sender/$', catalog.views.ContactFormView.as_view(), name='sender'),
     #url(r'^news2$', views.NewsListView.as_view(), name='news-list2'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
