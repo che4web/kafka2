@@ -81,7 +81,7 @@
         Оформить заказ
     </h2>
 
-    <form class="form-horizontal form-order" action="/sender" method="POST" role="form">
+    <form class="form-horizontal form-order" action="/sender/" method="POST" role="form">
         {%csrf_token%}
         {{form}}
         <div class="modal-footer modal-footer-form">
@@ -194,6 +194,24 @@
                   </div>
     </div>
 
+<div class="modal fade" id="succesModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Заявка отправлена</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
     <script>
         $(document).ready(function () {
             $('.address-map').append(
@@ -275,9 +293,9 @@ $('label').hide()
 </script>
 
 <script>
-$('.btn-send').click(function(){
-    alert(1)
-         event.preventDefault();
+$('.btn-send').click(function(event){
+     event.preventDefault();
+      $("#waitModal").modal('toggle');
     var form = $(this).parents('form:first');
     form.ajaxSubmit({url: '/sender/', 
         type: 'post',
